@@ -60,11 +60,12 @@ with st.sidebar.expander("🔎 Filtered Laptops Preview", expanded=True):
     st.write(preview_df[['name', 'price', 'ram']].head(5))
 
 # -------------------- Tabs --------------------
-tabs = st.tabs(["🔍 Semantic Search", "🎯 Recommendations", "🤖 Chatbot Only"])
+tabs = st.tabs(["🔍 Semantic Search", "🎯 Recommendations", "🤖 LapGuru"])
 
 # -------------------- Semantic Search Tab --------------------
 with tabs[0]:
-    st.header("🔍 Semantic Laptop Search")
+    st.header("🤖 Meet LapGuru - Your AI Laptop Expert")
+              
     user_query = st.text_input("Describe what you need", placeholder="e.g., i7 laptop for office work under 70000")
 
     if user_query:
@@ -130,7 +131,7 @@ with tabs[1]:
 
 # -------------------- Chatbot Only Tab --------------------
 with tabs[2]:
-    st.header("🤖 Laptop Chatbot")
+    st.header("🤖 Your Personal Chatbot")
     chat_query = st.text_input("Chat with AI")
 
     if chat_query:
